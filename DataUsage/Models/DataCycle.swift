@@ -10,11 +10,11 @@ import Foundation
 import RealmSwift
 
 class DataCycle: Object {
-     @objc dynamic var dataUsed: String = ""
-     @objc dynamic var quarter: String = ""
-     @objc dynamic var identifier: Int = 0
-     @objc dynamic var year: String = ""
-    
+    @objc dynamic var dataUsed: String = ""
+    @objc dynamic var quarter: String = ""
+    @objc dynamic var identifier: Int = 0
+    @objc dynamic var year: String = ""
+
     override static func primaryKey() -> String? {
         return "identifier"
     }

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2B28023D75EFB880E0A547F8 /* Pods_DataUsage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4A4815ED4AF2C5214A9BBCA /* Pods_DataUsage.framework */; };
+		69282613235DDA1A0071EABE /* DUQuarterPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69282612235DDA1A0071EABE /* DUQuarterPopover.swift */; };
+		69282615235DDBB30071EABE /* DUQuarterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69282614235DDBB30071EABE /* DUQuarterCell.swift */; };
+		6936A739235D875B002479FB /* Year.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6936A738235D875B002479FB /* Year.swift */; };
+		6936A73F235DACF6002479FB /* DUYearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6936A73E235DACF6002479FB /* DUYearCell.swift */; };
 		69C41BF8235C57070024A6A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C41BF7235C57070024A6A8 /* AppDelegate.swift */; };
 		69C41BFA235C57070024A6A8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C41BF9235C57070024A6A8 /* ViewController.swift */; };
 		69C41BFD235C57070024A6A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69C41BFB235C57070024A6A8 /* Main.storyboard */; };
@@ -57,6 +61,10 @@
 		2EE298680430D9E454495CB0 /* Pods-DataUsage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataUsage.release.xcconfig"; path = "Target Support Files/Pods-DataUsage/Pods-DataUsage.release.xcconfig"; sourceTree = "<group>"; };
 		37124CCAAE506555296EB757 /* Pods-DataUsageTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataUsageTests.release.xcconfig"; path = "Target Support Files/Pods-DataUsageTests/Pods-DataUsageTests.release.xcconfig"; sourceTree = "<group>"; };
 		3ABA9B846E59B14E5F7EA4B8 /* Pods-DataUsageTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DataUsageTests.debug.xcconfig"; path = "Target Support Files/Pods-DataUsageTests/Pods-DataUsageTests.debug.xcconfig"; sourceTree = "<group>"; };
+		69282612235DDA1A0071EABE /* DUQuarterPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUQuarterPopover.swift; sourceTree = "<group>"; };
+		69282614235DDBB30071EABE /* DUQuarterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUQuarterCell.swift; sourceTree = "<group>"; };
+		6936A738235D875B002479FB /* Year.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Year.swift; sourceTree = "<group>"; };
+		6936A73E235DACF6002479FB /* DUYearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DUYearCell.swift; sourceTree = "<group>"; };
 		69C41BF4235C57070024A6A8 /* DataUsage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataUsage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69C41BF7235C57070024A6A8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69C41BF9235C57070024A6A8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +141,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		69282619235DEEF10071EABE /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				6936A73E235DACF6002479FB /* DUYearCell.swift */,
+				69282614235DDBB30071EABE /* DUQuarterCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		6928261A235DF07C0071EABE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				69C41BF7235C57070024A6A8 /* AppDelegate.swift */,
+				69C41BFB235C57070024A6A8 /* Main.storyboard */,
+				69C41BFE235C57090024A6A8 /* Assets.xcassets */,
+				69C41C00235C57090024A6A8 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6936A73D235DACD0002479FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				69C41BF9235C57070024A6A8 /* ViewController.swift */,
+				69282612235DDA1A0071EABE /* DUQuarterPopover.swift */,
+				69282619235DEEF10071EABE /* CustomCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		69C41BEB235C57070024A6A8 = {
 			isa = PBXGroup;
 			children = (
@@ -158,13 +196,10 @@
 		69C41BF6235C57070024A6A8 /* DataUsage */ = {
 			isa = PBXGroup;
 			children = (
+				6928261A235DF07C0071EABE /* Resources */,
+				6936A73D235DACD0002479FB /* Views */,
 				69C41C26235C604C0024A6A8 /* Models */,
 				69C41C25235C5EE60024A6A8 /* Helpers */,
-				69C41BF7235C57070024A6A8 /* AppDelegate.swift */,
-				69C41BF9235C57070024A6A8 /* ViewController.swift */,
-				69C41BFB235C57070024A6A8 /* Main.storyboard */,
-				69C41BFE235C57090024A6A8 /* Assets.xcassets */,
-				69C41C00235C57090024A6A8 /* LaunchScreen.storyboard */,
 				69C41C03235C57090024A6A8 /* Info.plist */,
 			);
 			path = DataUsage;
@@ -202,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				69C41C27235C605D0024A6A8 /* DataCycle.swift */,
+				6936A738235D875B002479FB /* Year.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -429,11 +465,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				69E515D4235C73C8000F3A43 /* DUNetworkErrors.swift in Sources */,
+				69282613235DDA1A0071EABE /* DUQuarterPopover.swift in Sources */,
 				69C41BFA235C57070024A6A8 /* ViewController.swift in Sources */,
+				69282615235DDBB30071EABE /* DUQuarterCell.swift in Sources */,
 				69E515CC235C63B9000F3A43 /* DUNetworkManager.swift in Sources */,
 				69E515CA235C632F000F3A43 /* DUDataManager.swift in Sources */,
 				69C41C28235C605D0024A6A8 /* DataCycle.swift in Sources */,
+				6936A73F235DACF6002479FB /* DUYearCell.swift in Sources */,
 				69C41BF8235C57070024A6A8 /* AppDelegate.swift in Sources */,
+				6936A739235D875B002479FB /* Year.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
