@@ -56,7 +56,11 @@ class DUNetworkManager: NSObject {
                 if let dataResult = result as? [String: Any], let results = dataResult["result"] as? [String: Any]{
                     if let records = results["records"] as? [[String: Any]] {
                         let dataManager = DUDataManager()
-                        dataManager.saveDataUsageForOfflineCaching(records)
+                        dataManager.saveDataUsageForOfflineCaching(records, completionHandler: { (status) in
+                            if status {
+                                debugPrint("Data records saved to realm db")
+                            }
+                        })
                         self.delegate?.didCompleteReceivingConsumptionDetails()
                     }
                 }

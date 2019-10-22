@@ -66,6 +66,10 @@ extension ViewController: DUNetworkManagerDelegate {
 }
 
 extension ViewController: DUDataCyclesDelegate {
+    
+    /// did selectt action for showing quarter details
+    ///
+    /// - Parameter dataCycles: data cycles.
     func didSelectShowDataCyclesDetails(_ dataCycles: [DataCycle]) {
         let storyBoard = UIStoryboard.init(name: "Main", bundle: nil)
         if let popOver = storyBoard.instantiateViewController(withIdentifier: "DUQuarterPopover") as? DUQuarterPopover {
@@ -78,8 +82,6 @@ extension ViewController: DUDataCyclesDelegate {
             nav.preferredContentSize = CGSize(width: UIScreen.main.bounds.size.width/2, height: 221)
             nav.modalPresentationStyle = .formSheet
             nav.modalTransitionStyle = .crossDissolve
-
-
             self.navigationController?.present(nav, animated: true) {
                 
             }

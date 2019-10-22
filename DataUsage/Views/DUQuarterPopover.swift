@@ -17,7 +17,6 @@ class DUQuarterPopover: UIViewController {
         if let cycle = cycles.first {
             self.navigationController?.navigationBar.topItem?.title = cycle.year
         }
-        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: .done, target: self, action: #selector(dismissFormSheet))
     }
     

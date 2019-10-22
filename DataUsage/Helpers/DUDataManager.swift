@@ -29,7 +29,8 @@ class DUDataManager: NSObject {
     /// saves data into realm db
     ///
     /// - Parameter records: records
-    func saveDataUsageForOfflineCaching(_ records: [[String: Any]]) {
+    func saveDataUsageForOfflineCaching(_ records: [[String: Any]], completionHandler: @escaping (_ status: Bool)-> Void) {
+        var isWriteTransactionSuccess = false
         for record in records {
             let dataCycle = DataCycle()
             var yearStr: String = ""
@@ -46,8 +47,10 @@ class DUDataManager: NSObject {
                 try? realm?.write {
                     if let _ = realm?.objects(DataCycle.self).filter("identifier == %@",identifier).first {
                         realm?.add(dataCycle, update: .modified)
+                        isWriteTransactionSuccess = true
                     } else {
                         yearObj.cycles.append(dataCycle)
+                        isWriteTransactionSuccess = true
                     }
                 }
             } else {
@@ -56,11 +59,12 @@ class DUDataManager: NSObject {
                 year.cycles.append(dataCycle)
                 try? realm?.write() {
                     realm?.add(year)
+                    isWriteTransactionSuccess = true
                 }
             }
         }
         debugPrint("Realm DB Path: \(String(describing: realm?.configuration.fileURL))")
-        
+        completionHandler(isWriteTransactionSuccess)
     }
     
     /// fetches the data cycles saved in the data base
