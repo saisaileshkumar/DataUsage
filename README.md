@@ -5,6 +5,9 @@ This application supports universal devices.(iPad and iPhone)
 Used cocoapods for saving the data offline - Realm is the framework i have used.
 Please install cocoa pods incase if you encounter any issue
 
+Code Coverage Report:
+
+
 #Helpers
 DUDataManger - Saves the data into the realm DB
 DUNetworkManager - Fetches the data through a service call using URLSession
