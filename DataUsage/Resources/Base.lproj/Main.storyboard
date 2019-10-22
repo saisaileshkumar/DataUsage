@@ -95,6 +95,7 @@
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageSizeForAccessibilityContentSizeCategory="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfc-l7-QjJ">
                                                                     <rect key="frame" x="134" y="6" width="33" height="33"/>
+                                                                    <accessibility key="accessibilityConfiguration" identifier="decrease"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="33" id="Ydw-qk-EC2"/>
                                                                         <constraint firstAttribute="height" constant="33" id="xF8-YR-JLV"/>
@@ -164,7 +165,6 @@
         <!--Navigation Controller-->
         <scene sceneID="czr-Lx-eIV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="i9w-LX-n3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jk7-Ap-T59" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5L9-fA-FDl">
@@ -176,6 +176,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="yLK-wc-yu7"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9w-LX-n3H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-399.19999999999999" y="-588.75562218890559"/>
         </scene>
@@ -240,6 +241,9 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="popover">
+                            <bool key="isElement" value="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="Zsb-zj-KOX" firstAttribute="width" secondItem="D9J-Je-n3D" secondAttribute="width" id="URB-uQ-MYC"/>
                             <constraint firstItem="Zsb-zj-KOX" firstAttribute="height" secondItem="D9J-Je-n3D" secondAttribute="height" id="jD3-jI-CCg"/>
