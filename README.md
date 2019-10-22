@@ -13,7 +13,7 @@ DUNetworkManager - Fetches the data through a service call using URLSession
 DUNetworkErrors - Handles all network failure and success scenarios.
 
 #Models:
-DataCycle
+DataCycle,
 Year
 
 #Views:
@@ -25,5 +25,5 @@ DUPopover - Popover formsheet with data consumption for each quarter in a year
 
 #DataUsageUITests
 
-Need to change workspace settings of xcode inorder to support validating UITests.
+changed workspace settings of xcode inorder to support validating UITests as realm included
 Xcode-> Filee -> WorkSpaceSetttings -> Legacy build settings.
