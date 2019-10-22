@@ -5,8 +5,7 @@ This application supports universal devices.(iPad and iPhone)
 Used cocoapods for saving the data offline - Realm is the framework i have used.
 Please install cocoa pods incase if you encounter any issue
 
-Code Coverage Report:
-
+Code Coverage Report: DataUsageApp - 80.4 % (Refer screenshot part of repository)
 
 #Helpers
 DUDataManger - Saves the data into the realm DB
